@@ -1,0 +1,11 @@
+---
+- hosts: 192.168.66.168
+  user: root
+  tasks:
+  - name: install packages
+    action: yum name="{{packages}}" state=installed
+    vars:
+     packages:
+      - 'httpd' 
+      - 'git'
+        
